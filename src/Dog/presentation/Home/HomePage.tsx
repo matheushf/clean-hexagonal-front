@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { DogServices } from '../../application';
+import React from 'react';
+import { useHomeService } from '../../application/homeHook';
 
 function HomePage() {
-  const [dogs, setDogs] = useState();
+  const { dogs } = useHomeService();
 
-  async function init() {
-    const response = await DogServices().home.getDogs();
-    console.log('oi ', response);
-    setDogs(response);
-  }
-
-  useEffect(() => {
-    init();
-  }, []);
+  console.log('oi ', dogs);
 
   return <div>HomePage</div>;
 }
