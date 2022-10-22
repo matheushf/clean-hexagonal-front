@@ -1,12 +1,23 @@
-export interface DogI {
-  name: string;
-  origin: string;
-}
+import { getFavoriteDog } from '../services/homeService';
+import { FavoriteDogE } from './favoriteDog';
 
-export default class DogE {
-  constructor(readonly dog: DogI) {}
+export class DogE {
+  constructor(
+    readonly name: string,
+    readonly origin: string,
+    readonly image: {
+      id: string;
+      width: number;
+      height: number;
+      url: string;
+    },
+  ) {}
 
   getName() {
-    return this.dog.name;
+    return this.name;
+  }
+
+  isFavourite(favoriteDogs?: FavoriteDogE[]) {
+    return !!getFavoriteDog(this, favoriteDogs);
   }
 }
