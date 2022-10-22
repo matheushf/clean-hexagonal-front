@@ -1,3 +1,6 @@
+import { DogI } from '../entity/dog';
+
 export interface HomeRepositoryI {
-  getDogs: () => Promise<any>;
+  getDogs: () => Promise<DogI[]>;
+  saveFavouriteDogImage: () => Promise<any>;
 }

@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 import { DogRepository } from '../adapter/repository';
+import { DogI } from '../domain/entity/dog';
 
-export function useHomeService() {
-  const [dogs, setDogs] = useState();
+export function useHome() {
+  const [dogs, setDogs] = useState<DogI[]>();
 
-  async function init() {
+  async function fetchDogs() {
     const response = await DogRepository.home.getDogs();
     setDogs(response);
   }
 
   useEffect(() => {
-    init();
+    fetchDogs();
   }, []);
 
   return {
