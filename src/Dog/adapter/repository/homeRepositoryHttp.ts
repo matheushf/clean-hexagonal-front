@@ -1,10 +1,16 @@
 import { HomeRepositoryI } from '../../domain/ports/HomeRepository';
-import { HttpI } from '../../domain/ports/http';
+import { HttpI } from '../../../shared/domain/ports/http';
 
 export function HomeRepositoryHttp(http: HttpI): HomeRepositoryI {
+  const commonConfig = { baseURL: 'https://api.thedogapi.com/v1/' };
+
   function getDogs() {
-    return http.get('https://dog.ceo/api/breeds/list/all');
+    return http.get('/breeds?limit=10&page=0', commonConfig);
   }
 
-  return { getDogs };
+  function saveFavouriteDogImage() {
+    return http.post('/favourites', {}, commonConfig);
+  }
+
+  return { getDogs, saveFavouriteDogImage };
 }

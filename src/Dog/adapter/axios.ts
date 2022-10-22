@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { HttpI } from '../domain/ports/http';
+import { HttpI } from '../../shared/domain/ports/http';
 
 export const AxiosAdapter: HttpI = {
   get(path, config) {
