@@ -1,21 +1,30 @@
 import React from 'react';
-import { useHome } from '../../application/homeHook';
-import DogE from '../../domain/entity/dog';
+import { useHomeContext } from '../../application/homeContext';
+import { FavoriteButton } from './components/FavoriteButton';
 
 function HomePage() {
-  const { dogs } = useHome();
+  const { dogs } = useHomeContext();
 
-  console.log('oi ', dogs);
-
+  console.log('oi', dogs);
   return (
     <div>
       <div>HomePage</div>
       <br />
       Dogs
       <br />
-      {dogs?.map((dog) => (
-        <div>{new DogE(dog).dog.name}</div>
-      ))}
+      {dogs?.map((dog) => {
+        return (
+          <div>
+            <div>Breed name: {dog.name}</div>
+            <div>
+              <img src={dog.image.url} alt="Dog" height={200} width={200} />
+            </div>
+            <div>
+              <FavoriteButton dog={dog} />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
