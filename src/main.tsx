@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './Dog/presentation/Home/HomePage';
 import './index.css';
-import { HomeContextProvider } from './Dog/application/homeContext';
+import { HomeContextProvider } from './Dog/application/home/homeContext';
+import DetailsPage from './Dog/presentation/Details/DetailsPage';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
         <HomePage />
       </HomeContextProvider>
     ),
+  },
+  {
+    path: '/dog/:dogId',
+    element: <DetailsPage />,
   },
 ]);
 
