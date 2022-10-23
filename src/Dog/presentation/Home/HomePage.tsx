@@ -1,5 +1,6 @@
 import React from 'react';
-import { useHomeContext } from '../../application/homeContext';
+import { Link } from 'react-router-dom';
+import { useHomeContext } from '../../application/home/homeContext';
 import { FavoriteButton } from './components/FavoriteButton';
 
 function HomePage() {
@@ -17,7 +18,9 @@ function HomePage() {
           <div>
             <div>Breed name: {dog.name}</div>
             <div>
-              <img src={dog.image.url} alt="Dog" height={200} width={200} />
+              <Link to={`/dog/${dog.id}`}>
+                <img src={dog.image.url} alt="Dog" height={200} width={200} />
+              </Link>
             </div>
             <div>
               <FavoriteButton dog={dog} />

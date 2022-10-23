@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHomeContext } from '../../../application/homeContext';
+import { useHomeContext } from '../../../application/home/homeContext';
 import { DogE } from '../../../domain/entity';
 import { getFavoriteLabel } from '../../../domain/services/homeService';
 
