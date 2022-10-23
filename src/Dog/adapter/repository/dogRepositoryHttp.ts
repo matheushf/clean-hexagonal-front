@@ -1,9 +1,9 @@
 import { plainToInstance } from 'class-transformer';
-import { HomeRepositoryI } from '../../domain/ports/HomeRepository';
+import { DogRepositoryI } from '../../domain/ports/DogRepository';
 import { HttpI } from '../../../shared/domain/ports/http';
 import { DogE, FavoriteDogE } from '../../domain/entity';
 
-export function HomeRepositoryHttp(http: HttpI): HomeRepositoryI {
+export function DogRepositoryHttp(http: HttpI): DogRepositoryI {
   const commonConfig = {
     baseURL: 'https://api.thedogapi.com/v1/',
     headers: {
@@ -16,6 +16,10 @@ export function HomeRepositoryHttp(http: HttpI): HomeRepositoryI {
     return http
       .get('/breeds?limit=10&page=0', commonConfig)
       .then((dogs) => plainToInstance(DogE, dogs));
+  }
+
+  function getDogById(dogId: string) {
+    return http.get(`/breeds/${dogId}`, commonConfig);
   }
 
   function getFavouriteDogs() {
@@ -36,5 +40,5 @@ export function HomeRepositoryHttp(http: HttpI): HomeRepositoryI {
     return http.delete(`/favourites/${favoriteDog.id}`, commonConfig);
   }
 
-  return { getDogs, saveFavouriteDog, getFavouriteDogs, removeFavouriteDog };
+  return { getDogs, getDogById, saveFavouriteDog, getFavouriteDogs, removeFavouriteDog };
 }

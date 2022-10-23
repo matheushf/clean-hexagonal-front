@@ -1,12 +1,12 @@
 import { AxiosAdapter } from '../axios';
-import { HomeRepositoryHttp } from './homeRepositoryHttp';
+import { DogRepositoryHttp } from './dogRepositoryHttp';
 
-function Repository() {
+function buildRepository() {
   const http = AxiosAdapter;
 
   return {
-    home: HomeRepositoryHttp(http),
+    dog: DogRepositoryHttp(http),
   };
 }
 
-export const DogRepository = Repository();
+export const Repository = buildRepository();
