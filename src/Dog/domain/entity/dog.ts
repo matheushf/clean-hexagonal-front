@@ -1,4 +1,4 @@
-import { getFavoriteDog } from '../services/homeService';
+import { getFavoriteDog } from '../services';
 import { FavoriteDogE } from './favoriteDog';
 
 export class DogE {
@@ -13,10 +13,6 @@ export class DogE {
       url: string;
     },
   ) {}
-
-  getName() {
-    return this.name;
-  }
 
   isFavourite(favoriteDogs?: FavoriteDogE[]) {
     return !!getFavoriteDog(this, favoriteDogs);
