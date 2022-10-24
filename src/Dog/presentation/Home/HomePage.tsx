@@ -6,12 +6,9 @@ import { FavoriteButton } from './components/FavoriteButton';
 function HomePage() {
   const { dogs } = useHomeContext();
 
-  console.log('oi', dogs);
   return (
     <div>
-      <div>HomePage</div>
-      <br />
-      Dogs
+      <h3>HomePage</h3>
       <br />
       {dogs?.map((dog) => {
         return (
