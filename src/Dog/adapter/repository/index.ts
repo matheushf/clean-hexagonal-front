@@ -1,11 +1,12 @@
 import { AxiosAdapter } from '../axios';
 import { DogRepositoryHttp } from './dogRepositoryHttp';
+import { DogRepositoryMemory } from './dogRepositoryMemory';
 
 function buildRepository() {
   const http = AxiosAdapter;
 
   return {
-    dog: DogRepositoryHttp(http),
+    dog: { ...DogRepositoryHttp(http), ...DogRepositoryMemory() },
   };
 }
 

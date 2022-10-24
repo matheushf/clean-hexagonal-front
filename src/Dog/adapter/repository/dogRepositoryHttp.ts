@@ -3,7 +3,7 @@ import { DogRepositoryI } from '../../domain/ports/DogRepository';
 import { HttpI } from '../../../shared/domain/ports/http';
 import { DogE, FavoriteDogE } from '../../domain/entity';
 
-export function DogRepositoryHttp(http: HttpI): DogRepositoryI {
+export function DogRepositoryHttp(http: HttpI): Omit<DogRepositoryI, 'addDog'> {
   const commonConfig = {
     baseURL: 'https://api.thedogapi.com/v1/',
     headers: {
