@@ -20,7 +20,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^11.8.6",
     "react-router-dom": "^6.4.2",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

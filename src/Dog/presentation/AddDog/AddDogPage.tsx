@@ -1,6 +1,8 @@
 import { Field, Form, Formik } from 'formik';
 import { useTranslation } from 'react-i18next';
+import { validateSchema } from '../../../shared/infra/schemaValidator';
 import { useAddDog } from '../../application/add-dog/addDogHook';
+import { DogSchema } from '../../domain/schema/dogValidationSchema';
 
 function AddDogPage() {
   const { t } = useTranslation('addDog');
@@ -16,6 +18,7 @@ function AddDogPage() {
         }}
         isInitialValid={false}
         onSubmit={onSave}
+        validate={(values) => validateSchema(values, DogSchema)}
       >
         {({ isSubmitting, isValid }) => (
           <Form>
