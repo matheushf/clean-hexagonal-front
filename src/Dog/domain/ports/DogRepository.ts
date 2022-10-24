@@ -7,4 +7,5 @@ export interface DogRepositoryI {
   saveFavouriteDog: (dog: DogE) => Promise<any>;
   removeFavouriteDog: (dog: FavoriteDogE) => Promise<any>;
   getFavouriteDogs: () => Promise<any>;
+  addDog: (dog: Partial<DogE>) => Partial<DogE>[];
 }
