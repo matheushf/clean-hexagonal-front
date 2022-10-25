@@ -1,16 +1,14 @@
 import { DogRepositoryI } from '../../domain/ports/DogRepository';
 import { DogE } from '../../domain/entity';
 
-export function DogRepositoryMemory(): Pick<DogRepositoryI, 'addDog'> {
+export function DogRepositoryMemory(): Pick<DogRepositoryI, 'addDogMemory'> {
   const dogs = [] as Partial<DogE>[];
 
-  function addDog(dog: Partial<DogE>) {
+  function addDogMemory(dog: Partial<DogE>) {
     dogs.push(dog);
-
-    console.log('oi rpp ', dogs);
 
     return dogs;
   }
 
-  return { addDog };
+  return { addDogMemory };
 }
