@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { initReactI18next } from 'react-i18next';
+import { Grommet } from 'grommet';
 import HomePage from './Dog/presentation/Home/HomePage';
 import './index.css';
 import { HomeContextProvider } from './Dog/application/home/homeContext';
@@ -33,6 +34,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Grommet>
+      <RouterProvider router={router} />
+    </Grommet>
   </React.StrictMode>,
 );
