@@ -18,6 +18,7 @@ export function useHome() {
     try {
       setSavingFavoriteId(dog.image.id);
       const response = await Repository.dog.saveFavouriteDog(dog);
+      console.log('save', response);
       setFavouriteDogs([...favouriteDogs, { image_id: dog.image.id, id: response.id }]);
       setSavingFavoriteId('');
     } catch (error) {
@@ -44,6 +45,8 @@ export function useHome() {
 
   async function onStar(dog: DogE) {
     const favoriteDog = getFavoriteDog(dog, favouriteDogs);
+
+    console.log('star ', favoriteDog);
 
     if (favoriteDog) {
       await removeFavoriteDog(favoriteDog);
