@@ -1,0 +1,8 @@
+{
+  "title": "Dog info",
+  "backButton": "< List Dogs",
+  "name": "Name",  
+  "breedGroup": "Breed Group",  
+  "temperament": "Temperament",  
+  "breeFor": "Breed for"  
+}
