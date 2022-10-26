@@ -1,6 +1,5 @@
 import { Form, Formik } from 'formik';
 import {
-  Anchor,
   Box,
   Button,
   FormField,
@@ -41,7 +40,7 @@ function AddDogPage() {
             pad={{ bottom: '40px' }}
             parent={
               <Link to="/" style={{ textDecoration: 'none' }}>
-                <Anchor margin={{ bottom: '10px' }} label={t('backButton')} />
+                <Text color="brand">{t('backButton')}</Text>
               </Link>
             }
           />
