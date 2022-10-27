@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@clean-front/shared": ["packages/shared/src/index.ts"]
+    }
+  }
+}
