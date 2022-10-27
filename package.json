@@ -4,13 +4,35 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^1.1.3",
+    "class-transformer": "^0.5.1",
+    "i18next": "^22.0.2",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "reflect-metadata": "^0.1.13",
+    "zod": "^3.19.1"
+  },
   "devDependencies": {
+    "@nrwl/cli": "14.5.10",
+    "@nrwl/eslint-plugin-nx": "^14.5.10",
     "@nrwl/js": "^15.0.3",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "^15.0.3",
     "nx": "15.0.3",
-    "prettier": "^2.6.2"
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1"
   },
   "workspaces": [
     "packages/*"
