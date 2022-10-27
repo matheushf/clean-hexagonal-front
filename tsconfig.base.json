@@ -7,14 +7,16 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "importHelpers": false,
+    "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "references": [{ "path": "./tsconfig.paths.json" }]
+    "paths": {}
   },
+  "references": [{ "path": "./tsconfig.paths.json" }],
   "exclude": ["node_modules", "tmp"]
 }
+
