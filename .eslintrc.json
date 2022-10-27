@@ -1,0 +1,92 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:prettier/recommended"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.ts",
+                "*.tsx",
+                "*.js",
+                "*.jsx",
+                "!*.test.ts",
+                "!*.spec.ts"
+            ],
+            "rules": {
+                "@nrwl/nx/enforce-module-boundaries": [
+                    "error",
+                    {
+                        "enforceBuildableLibDependency": true,
+                        "allow": [],
+                        "depConstraints": [
+                            {
+                                "sourceTag": "*",
+                                "onlyDependOnLibsWithTags": [
+                                    "*"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": [
+                "*.test.ts",
+                "*.spec.ts",
+                "*-jest.ts"
+            ],
+            "rules": {
+                "@nrwl/nx/enforce-module-boundaries": 0
+            }
+        },
+        {
+            "files": [
+                "*.ts",
+                "*.tsx"
+            ],
+            "extends": [
+                "plugin:@nrwl/nx/typescript"
+            ],
+            "rules": {}
+        },
+        {
+            "files": [
+                "*.js",
+                "*.jsx"
+            ],
+            "extends": [
+                "plugin:@nrwl/nx/javascript"
+            ],
+            "rules": {}
+        }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier",
+        "@nrwl/nx"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "import/prefer-default-export": "off",
+    }
+}
