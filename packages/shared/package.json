@@ -1,0 +1,5 @@
+{
+  "name": "@clean-front/shared",
+  "main": "src/index.ts",
+  "type": "module"
+}
