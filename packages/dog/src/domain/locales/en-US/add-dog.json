@@ -1,0 +1,9 @@
+{
+  "title": "Add your own dog",
+  "backButton": "< List dogs",
+  "nameLabel": "Name",
+  "breedLabel": "Breed",
+  "saveOnMemory": "Memory",
+  "saveOnStorage": "Local storage",
+  "button": "Save"
+}

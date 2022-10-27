@@ -1,0 +1,6 @@
+{
+  "root": "packages/dog",
+  "sourceRoot": "packages/dog/src",
+  "projectType": "application",
+  "implicitDependencies": ["!@clean-front/shared"]
+}
