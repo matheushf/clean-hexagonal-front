@@ -10,22 +10,21 @@
     "i18next": "^22.0.2",
     "i18next-browser-languagedetector": "^6.1.2",
     "reflect-metadata": "^0.1.13",
+    "vue-router": "^4.1.6",
     "zod": "^3.19.1"
   },
   "devDependencies": {
     "@nrwl/cli": "14.5.10",
     "@nrwl/eslint-plugin-nx": "^14.5.10",
-    "@nrwl/js": "^15.0.3",
     "@nrwl/jest": "15.0.4",
+    "@nrwl/js": "^15.0.3",
     "@nrwl/linter": "15.0.4",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "15.0.4",
     "@nrwl/web": "15.0.4",
     "@nrwl/workspace": "^15.0.3",
-    "nx": "15.0.3",
-    "prettier": "^2.7.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -35,8 +34,11 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1"
+    "naive-ui": "^2.33.5",
+    "nx": "15.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
   },
   "workspaces": [
     "packages/*"
