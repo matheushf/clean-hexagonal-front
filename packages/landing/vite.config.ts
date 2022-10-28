@@ -8,11 +8,12 @@ export default defineConfig(() => {
     plugins: [
       qwikCity({
         routesDir: './src/presentation',
-        // basePathname: `/src/application/config/`
       }),
-      qwikVite({ ssr: {
-        input: './src/application/entry/entry.ssr.tsx'
-      } }),
+      qwikVite({
+        ssr: {
+          input: './src/application/entry/entry.ssr.tsx',
+        },
+      }),
       tsconfigPaths(),
     ],
     preview: {
