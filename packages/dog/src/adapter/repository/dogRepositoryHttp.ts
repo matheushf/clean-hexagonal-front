@@ -16,7 +16,7 @@ export function DogRepositoryHttp(
 
   function getDogs() {
     return http
-      .get('/breeds?limit=10&page=0', commonConfig)
+      .get('/breeds?limit=20&page=0', commonConfig)
       .then((dogs) => plainToInstance(DogE, dogs));
   }
 

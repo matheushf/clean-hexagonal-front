@@ -1,4 +1,4 @@
-import { AxiosAdapter } from '../axios';
+import { AxiosAdapter } from '@clean-front/shared';
 import { DogRepositoryHttp } from './dogRepositoryHttp';
 import { DogRepositoryMemory } from './dogRepositoryMemory';
 import { DogRepositoryStorage } from './dogRepositoryStorage';
