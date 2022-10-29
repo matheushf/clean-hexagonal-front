@@ -1,0 +1,47 @@
+x-sign {
+  // --interval: 1s;
+  display: block;
+  // text-shadow: 
+  //   0 0 10px var(--color1),
+  //   0 0 20px var(--color2),
+  //   0 0 40px var(--color3),
+  //   0 0 80px var(--color4);
+  // will-change: filter, color;
+  // filter: saturate(60%);
+  // animation: flicker steps(100) 5000ms 1s infinite;
+}
+
+x-sign.primary {
+  color: goldenrod;
+  // --color1: goldenrod;
+  // --color2: orangered;
+  // --color3: mediumblue;
+  // --color4: purple;
+  font-family: grupporegular;
+}
+
+x-sign.blue {
+  color: purple;
+  --color1: darken(purple);
+  --color2: orangered;
+  --color3: mediumblue;
+  --color4: purple;
+  font-family: grupporegular;
+}
+
+
+x-sign.secondary {
+  color: lightyellow;
+  --color1: gold;
+  --color2: firebrick;
+  --color3: pink;
+  --color4: red;
+  font-family: londrina_outlineregular;
+}
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}

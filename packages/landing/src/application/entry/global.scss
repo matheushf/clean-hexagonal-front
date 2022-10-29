@@ -1,0 +1,39 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+:root {
+  --qwik-dark-blue: #006ce9;
+  --qwik-light-blue: #18b6f6;
+  --qwik-light-purple: #ac7ff4;
+  --qwik-dark-purple: #713fc2;
+}
+
+html {
+  background: #090000;
+  font-size: calc(1em + 3vmax);
+  line-height: 1.1;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'grupporegular';
+  src: url('../../assets/gruppo-regular-webfont.woff2') format('woff2'),
+    url('../../assets/gruppo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

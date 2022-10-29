@@ -1,0 +1,21 @@
+button {
+  background-color: transparent;
+  appearance: unset;
+  border: none;
+  cursor: pointer;
+}
+
+button.primary {
+  border: 1px goldenrod solid;
+  padding: 10px 50px;
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px;
+  width: 100%;
+
+  &:hover {
+    color: goldenrod;
+    border-color: white;
+  }
+}

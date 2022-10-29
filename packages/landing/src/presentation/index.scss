@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.container-title {
+  height: 20%;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-top: 20px;
+  }
+
+  .container-nav {
+    flex-direction: column;
+    align-items: normal;
+
+    button {
+      margin-top: 20px;
+    }
+  }
+}
