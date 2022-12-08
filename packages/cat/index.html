@@ -8,6 +8,26 @@
   </head>
   <body>
     <div id="app"></div>
+    
+    <script src="/public/~partytown/partytown.js"></script>
+    <script type="module">
+      import { partytownSnippet } from '@builder.io/partytown/integration';
+      const snippetText = partytownSnippet();
+      const el = document.createElement('script');
+      el.innerText = snippetText;
+      document.body.appendChild(el);
+    </script>
+    
+    <script type="text/partytown">
+      console.log('partytown needed');
+      let i = 9999999999;
+      while (i--) {
+        // noop
+      }
+
+      console.log('partytown really needed');
+      document.body.appendChild(document.createTextNode('Some text'));
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
