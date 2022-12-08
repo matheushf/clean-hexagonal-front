@@ -3,7 +3,22 @@
 
 A example of using Clean Architecture on the Frontend
 
-## todo
+<br>
+
+# Running it locally
+
+### Install all dependencies with:
+`npm install`
+
+### Install NX Cli globally:
+`npm i -g add nx`
+
+### Start the Micro-Front with
+`nx run @clean-front/{package}`
+
+<br>
+
+# Todo
 
 - (x) Add i18n
 - (x) Add a page to add your own dog (should have a form using Formik)
