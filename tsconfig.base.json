@@ -17,7 +17,10 @@
     "baseUrl": ".",
     "paths": {}
   },
-  "references": [{ "path": "./tsconfig.paths.json" }],
+  "references": [
+    {
+      "path": "./tsconfig.paths.json"
+    }
+  ],
   "exclude": ["node_modules", "tmp"]
 }
-
