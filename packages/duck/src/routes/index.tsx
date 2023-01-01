@@ -1,3 +1,4 @@
-import Index from '../presentation';
+import Index, { links } from '../presentation';
 
+export { links }
 export default Index;

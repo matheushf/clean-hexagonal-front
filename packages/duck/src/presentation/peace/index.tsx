@@ -1,6 +1,6 @@
 import { Form } from "@remix-run/react";
 
-export default function Index() {
+export default function PeacePage() {
   return (
     <div>
       <h1>There never was peace!</h1>

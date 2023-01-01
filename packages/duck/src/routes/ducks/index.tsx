@@ -1,3 +1,4 @@
-import Index from '../../presentation/ducks';
+import Index, { loader } from '../../presentation/ducks';
 
+export { loader }
 export default Index;
