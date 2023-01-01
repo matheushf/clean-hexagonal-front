@@ -1,11 +1,12 @@
 import fs from 'fs/promises';
+import { DuckE } from 'packages/duck/src/domain/entity';
+import { DuckRepositoryI } from 'packages/duck/src/domain/ports/DuckRepository';
 import path from 'path';
 
-// const filepath = path.resolve(__dirname, `./ducks.json`);
-const filepath = 'ducks.json';
+const filepath = 'db/ducks.json';
 
-export function DuckFileRepository() {
-  function addDuck(ducks = [{}]) {
+export function DuckFileRepository(): DuckRepositoryI {
+  function addDuck(ducks: DuckE[]) {
     return fs.writeFile(filepath, JSON.stringify({ ducks }));
   }
 
