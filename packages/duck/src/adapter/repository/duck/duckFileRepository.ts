@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import { DuckE } from 'packages/duck/src/domain/entity';
 import { DuckRepositoryI } from 'packages/duck/src/domain/ports/DuckRepository';
-import path from 'path';
 
 const filepath = 'db/ducks.json';
 
