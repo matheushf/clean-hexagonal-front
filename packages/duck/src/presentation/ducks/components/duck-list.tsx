@@ -15,5 +15,3 @@ export function DuckList() {
     </div>
   );
 }
-
-export { loader }

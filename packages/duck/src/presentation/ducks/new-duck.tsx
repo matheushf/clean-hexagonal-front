@@ -1,10 +1,9 @@
-import { Form, Link, useTransition as useNavigation } from '@remix-run/react';
-import { addDuckAction } from '../../application/duck/addDuck';
-import { DuckList, loader } from './components/duck-list';
+import { Form, Link } from '@remix-run/react';
+import { useNewDuck, addDuckAction, getDucksLoader } from '../../application/duck/';
+import { DuckList } from './components/duck-list';
 
 export default function NewDuckPage() {
-  const navigation = useNavigation();
-  const isSubmitting = navigation.state === 'submitting';
+  const { isSubmitting } = useNewDuck();
 
   return (
     <div>
@@ -23,4 +22,4 @@ export default function NewDuckPage() {
   );
 }
 
-export { loader, addDuckAction as action };
+export { getDucksLoader as loader, addDuckAction as action };
