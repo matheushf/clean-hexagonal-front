@@ -1,3 +1,15 @@
+# Remix App
+
+App build with the Remix / React framework and Clean Architecture
+
+Read more about it in [this article](https://medium.com/@matheushf/remix-with-clean-architecture-e561eb5fa3cd)
+<br>
+<br>
+<br>
+<br>
+<br>
+
+-------
 # Welcome to Nx + Remix!
 
 - [Remix Docs](https://remix.run/docs)

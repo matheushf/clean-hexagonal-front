@@ -1,7 +1,8 @@
 # Clean Hexagonal Frontend
 (this is a work in progress)
 
-A example of using Clean Architecture on the Frontend
+A example of using Clean Architecture on the Frontend.
+Read more about it [here](https://medium.com/@matheushf/clean-architecture-on-frontend-applications-7d724d250432)
 
 <br>
 
@@ -15,6 +16,23 @@ A example of using Clean Architecture on the Frontend
 
 ### Start the Micro-Front with
 `nx run @clean-front/{package}`
+
+# Packages and Stacks
+- Monorepo
+      
+      Nx
+- @clean-front/cat
+
+      Vue 3, Vite, Partytown, TS
+- @clean-front/dog
+
+      React, Vite, TS
+- @clean-front/duck
+
+      Remix, TS
+- @clean-front/landing
+
+      Qwik, TS
 
 <br>
 
